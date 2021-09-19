@@ -13,8 +13,8 @@ def get_clip():
 
 @st.cache
 def get_dataset():
-    filenames = json.loads(open("index/filenames.json").read())
-    x = torch.load("index/clip_codes.pt").to(device)
+    filenames = json.loads(open("openimagedataset_validation/filenames.json").read())
+    x = torch.load("openimagedataset_validation/clip_codes.pt").to(device)
     if device == "cpu":
         x = x.float()
 
